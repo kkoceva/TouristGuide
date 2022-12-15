@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouristGuide", "TouristGuide\TouristGuide.csproj", "{2C9D9963-40C7-495D-9765-AF4A36932CE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouristGuide", "TouristGuide\TouristGuide.csproj", "{2C9D9963-40C7-495D-9765-AF4A36932CE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouristGuide.Infrastructure", "TouristGuide.Infrastructure\TouristGuide.Infrastructure.csproj", "{894B5548-6080-419A-85A3-868C55CF236B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouristGuide.Core", "TouristGuide.Core\TouristGuide.Core.csproj", "{8237AF00-6DBE-451E-AB2D-2B8881C38494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2C9D9963-40C7-495D-9765-AF4A36932CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C9D9963-40C7-495D-9765-AF4A36932CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C9D9963-40C7-495D-9765-AF4A36932CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894B5548-6080-419A-85A3-868C55CF236B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894B5548-6080-419A-85A3-868C55CF236B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894B5548-6080-419A-85A3-868C55CF236B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894B5548-6080-419A-85A3-868C55CF236B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8237AF00-6DBE-451E-AB2D-2B8881C38494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8237AF00-6DBE-451E-AB2D-2B8881C38494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8237AF00-6DBE-451E-AB2D-2B8881C38494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8237AF00-6DBE-451E-AB2D-2B8881C38494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

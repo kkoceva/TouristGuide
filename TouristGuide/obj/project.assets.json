@@ -951,6 +951,33 @@
             "rid": "win"
           }
         }
+      },
+      "TouristGuide.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "TouristGuide.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TouristGuide.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TouristGuide.Core.dll": {}
+        }
+      },
+      "TouristGuide.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.11"
+        },
+        "compile": {
+          "bin/placeholder/TouristGuide.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TouristGuide.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -2442,6 +2469,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "TouristGuide.Core/1.0.0": {
+      "type": "project",
+      "path": "../TouristGuide.Core/TouristGuide.Core.csproj",
+      "msbuildProject": "../TouristGuide.Core/TouristGuide.Core.csproj"
+    },
+    "TouristGuide.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../TouristGuide.Infrastructure/TouristGuide.Infrastructure.csproj",
+      "msbuildProject": "../TouristGuide.Infrastructure/TouristGuide.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2450,7 +2487,8 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.11",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.11",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.11"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.11",
+      "TouristGuide.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2483,7 +2521,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj": {
+              "projectPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TouristGuide.Data;
+using TouristGuide.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
