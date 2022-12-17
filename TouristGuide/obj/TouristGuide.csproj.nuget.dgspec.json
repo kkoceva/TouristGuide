@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj": {}
+    "C:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj": {}
   },
   "projects": {
-    "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj": {
+    "C:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj",
+        "projectUniqueName": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj",
         "projectName": "TouristGuide.Core",
-        "projectPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj",
+        "projectPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj",
         "packagesPath": "C:\\Users\\Katya\\.nuget\\packages\\",
-        "outputPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\obj\\",
+        "outputPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Katya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj": {
-                "projectPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj"
+              "C:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj": {
+                "projectPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj"
               }
             }
           }
@@ -62,24 +63,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj": {
+    "C:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj",
+        "projectUniqueName": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj",
         "projectName": "TouristGuide.Infrastructure",
-        "projectPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj",
+        "projectPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\TouristGuide.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Katya\\.nuget\\packages\\",
-        "outputPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\obj\\",
+        "outputPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Katya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -136,24 +138,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj": {
+    "C:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj",
+        "projectUniqueName": "C:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj",
         "projectName": "TouristGuide",
-        "projectPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj",
+        "projectPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide\\TouristGuide.csproj",
         "packagesPath": "C:\\Users\\Katya\\.nuget\\packages\\",
-        "outputPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide\\obj\\",
+        "outputPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Katya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -167,8 +170,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj": {
-                "projectPath": "D:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj"
+              "C:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj": {
+                "projectPath": "C:\\TouristGuide\\TouristGuide\\TouristGuide.Core\\TouristGuide.Core.csproj"
               }
             }
           }
@@ -223,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
