@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace TouristGuide.Infrastructure.Data
 {
-    public class Category
+    public class Country
     {
-        public Category()
+        public Country()
         {
             Places = new List<Place>();
         }

@@ -1,0 +1,11 @@
+﻿@using TouristGuide.Core.Models.Place
+@model PlaceModel
+
+@{
+    ViewBag.Title = "Edit Place";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<partial name="_PlaceFormPartial" model="@Model" />

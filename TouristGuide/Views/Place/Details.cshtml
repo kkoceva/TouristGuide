@@ -1,0 +1,33 @@
+﻿@using TouristGuide.Core.Models.Place
+@model PlaceDetailsModel
+
+@{
+    ViewBag.Title = "Place Details";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div class="container" style="display:inline">
+    <div class="row">
+        <div class="col-4">
+            <img class="card-img-top" style="width: 20rem;"
+                 src="@Model.ImageUrl" alt="Place Image">
+        </div>
+        <div class="card col-8 border-0">
+            <p style="font-size:25px;"><u>@Model.Title</u></p>
+            <p>Located in: <b>@Model.Description</b></p>
+            <p>@Model.Description</p>
+            <p>Category: <b>@Model.Category</b></p>
+            <div class="form-inline">
+                @if (this.User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-warning" asp-controller="Place" asp-action="Edit"
+                       asp-route-id="@Model.Id">Edit</a>
+                    <a class="ml-2 btn btn-danger" asp-controller="Place" asp-action="Delete"
+                       asp-route-id="@Model.Id">Delete</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
