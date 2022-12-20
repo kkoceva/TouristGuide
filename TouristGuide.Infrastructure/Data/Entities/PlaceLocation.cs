@@ -5,22 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TouristGuide.Infrastructure.Data
+namespace TouristGuide.Infrastructure.Data.Entities
 {
-    public class Country
+    public class PlaceLocation
     {
-        public Country()
-        {
-            Places = new List<Place>();
-        }
-
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(100)]
         public string Name { get; set; } = null!;
-
-        public List<Place> Places { get; set; }
     }
 }

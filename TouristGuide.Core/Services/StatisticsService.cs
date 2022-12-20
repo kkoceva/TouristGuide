@@ -1,8 +1,8 @@
 ﻿using TouristGuide.Core.Contracts;
 using TouristGuide.Core.Models.Statistics;
-using TouristGuide.Infrastructure.Data;
 using TouristGuide.Infrastructure.Data.Common;
 using Microsoft.EntityFrameworkCore;
+using TouristGuide.Infrastructure.Data.Entities;
 
 namespace TouristGuide.Core.Services
 {

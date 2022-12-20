@@ -1,6 +1,5 @@
 ﻿using TouristGuide.Core.Contracts.Admin;
 using TouristGuide.Core.Models.Admin;
-using TouristGuide.Infrastructure.Data;
 using TouristGuide.Infrastructure.Data.Common;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TouristGuide.Infrastructure.Data.Entities;
 
 namespace TouristGuide.Core.Services.Admin
 {

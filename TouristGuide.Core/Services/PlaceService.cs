@@ -1,10 +1,10 @@
 ﻿using TouristGuide.Core.Contracts;
 using TouristGuide.Core.Exceptions;
 using TouristGuide.Core.Models.Place;
-using TouristGuide.Infrastructure.Data;
 using TouristGuide.Infrastructure.Data.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using TouristGuide.Infrastructure.Data.Entities;
 
 namespace TouristGuide.Core.Services
 {

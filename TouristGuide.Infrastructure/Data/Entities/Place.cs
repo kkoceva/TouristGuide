@@ -7,7 +7,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TouristGuide.Infrastructure.Data
+namespace TouristGuide.Infrastructure.Data.Entities
 {
     public class Place
     {
@@ -42,6 +42,17 @@ namespace TouristGuide.Infrastructure.Data
 
         [ForeignKey(nameof(CountryId))]
         public Country Country { get; set; } = null!;
+
+        [Required]
+        public int ParentPlaceId { get; set; }
+
+        [ForeignKey(nameof(CountryId))]
+        public ParentPlace ParentPlace { get; set; } = null!;
+
+        public int? PlaceLocationId { get; set; }
+
+        [ForeignKey(nameof(CountryId))]
+        public PlaceLocation PlaceLocation { get; set; }
 
         public string? UserId { get; set; }
 

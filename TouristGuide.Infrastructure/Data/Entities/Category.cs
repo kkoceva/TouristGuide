@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TouristGuide.Infrastructure.Data
+namespace TouristGuide.Infrastructure.Data.Entities
 {
     public class Category
     {
