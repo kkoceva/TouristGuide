@@ -10,6 +10,11 @@ namespace TouristGuide.Controllers
 
         public IActionResult Index()
         {
+            if (User?.Identity?.IsAuthenticated ?? false)
+            {
+                return RedirectToAction("All", "Places");
+            }
+
             return View();
         }
 

@@ -17,11 +17,11 @@ namespace TouristGuide.Infrastructure.Data.Entities
         }
 
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Title { get; set; } = null!;
+        public string Name { get; set; } = null!;
 
         [Required]
         [StringLength(500)]

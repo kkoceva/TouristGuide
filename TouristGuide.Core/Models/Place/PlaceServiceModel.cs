@@ -5,9 +5,9 @@ namespace TouristGuide.Core.Models.Place
 {
     public class PlaceServiceModel : IPlaceModel
     {
-        public int Id { get; init; }
+        public string Id { get; init; }
 
-        public string Title { get; init; } = null!;
+        public string Name { get; init; } = null!;
 
 
         [Display(Name = "Image URL")]

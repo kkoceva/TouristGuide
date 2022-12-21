@@ -19,8 +19,6 @@ namespace TouristGuide.Core.Contracts
 
         Task<IEnumerable<string>> AllCategoriesNames();
 
-        Task<IEnumerable<PlaceServiceModel>> AllPlacesByAgentId(int id);
-
         Task<IEnumerable<PlaceServiceModel>> AllPlacesByUserId(string userId);
 
         Task<bool> Exists(int id);
@@ -30,11 +28,6 @@ namespace TouristGuide.Core.Contracts
         Task<int> GetPlaceCategoryId(int placeId);
 
         Task Delete(int placeId);
-
-        Task<bool> IsRentedByUserWithId(int placeId, string currentUserId);
-
-        Task Rent(int placeId, string currentUserId);
-
-        Task Leave(int placeId);
+      
     }
 }

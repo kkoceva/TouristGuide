@@ -2,7 +2,7 @@
 {
     public interface IPlaceModel
     {
-        public string Title { get; }
+        public string Name { get; }
 
         public string Description { get; }
 
