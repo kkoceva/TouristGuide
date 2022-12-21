@@ -9,7 +9,7 @@ namespace TouristGuide.Core.Extensions
         public static string GetInformation(this IPlaceModel place)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(place.Title.Replace(" ", "-"));
+            sb.Append(place.Name.Replace(" ", "-"));
             sb.Append("-");
 
             return sb.ToString();

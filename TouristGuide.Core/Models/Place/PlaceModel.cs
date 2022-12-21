@@ -9,11 +9,7 @@ namespace TouristGuide.Core.Models.Place
 
         [Required]
         [StringLength(50, MinimumLength = 10)]
-        public string Title { get; set; } = null!;
-
-        [Required]
-        [StringLength(150, MinimumLength = 30)]
-        public string Address { get; set; } = null!;
+        public string Name { get; set; } = null!;
 
         [Required]
         [StringLength(500, MinimumLength = 50)]

@@ -41,7 +41,7 @@ namespace TouristGuide.Core.Services
             {
                 searchTerm = $"%{searchTerm.ToLower()}%";
 
-                places = places.Where(h => EF.Functions.Like(h.Title.ToLower(), searchTerm));
+                places = places.Where(h => EF.Functions.Like(h.Name.ToLower(), searchTerm));
             }
 
             result.Places = await places
@@ -51,7 +51,7 @@ namespace TouristGuide.Core.Services
                 {
                     Id = p.Id,
                     ImageUrl = p.ImageUrl,
-                    Title = p.Title
+                    Name = p.Name
                 })
                 .ToListAsync();
 
@@ -87,7 +87,7 @@ namespace TouristGuide.Core.Services
                 {
                     Id = c.Id,
                     ImageUrl = c.ImageUrl,
-                    Title = c.Title
+                    Name = c.Name
                 })
                 .ToListAsync();
         }
@@ -99,7 +99,7 @@ namespace TouristGuide.Core.Services
                 {
                     Id = c.Id,
                     ImageUrl = c.ImageUrl,
-                    Title = c.Title
+                    Name = c.Name
                 })
                 .ToListAsync();
         }
@@ -110,14 +110,14 @@ namespace TouristGuide.Core.Services
                 .AnyAsync(c => c.Id == categoryId);
         }
 
-        public async Task<int> Create(PlaceModel model, int agentId)
+        public async Task<string> Create(PlaceModel model)
         {
             var place = new Place()
             {
                 CategoryId = model.CategoryId,
                 Description = model.Description,
                 ImageUrl = model.ImageUrl,
-                Title = model.Title,
+                Name = model.Name,
             };
 
             try
@@ -146,14 +146,14 @@ namespace TouristGuide.Core.Services
 
             place.Description = model.Description;
             place.ImageUrl = model.ImageUrl;
-            place.Title = model.Title;
+            place.Name = model.Name;
             place.CategoryId = model.CategoryId;
             place.CountryId = model.CountryId;
 
             await repo.SaveChangesAsync();
         }
 
-        public async Task<bool> Exists(int id)
+        public async Task<bool> Exists(string id)
         {
             return await repo.AllReadonly<Place>()
                 .AnyAsync(h => h.Id == id);
@@ -165,7 +165,7 @@ namespace TouristGuide.Core.Services
         }
 
        
-        public async Task<PlaceDetailsModel> PlaceDetailsById(int id)
+        public async Task<PlaceDetailsModel> PlaceDetailsById(string id)
         {
             return await repo.AllReadonly<Place>()
                 .Where(h => h.Id == id)
@@ -175,13 +175,13 @@ namespace TouristGuide.Core.Services
                     Description = h.Description,
                     Id = id,
                     ImageUrl = h.ImageUrl,
-                    Title = h.Title,
+                    Name = h.Name,
                     
                 })
                 .FirstAsync();
         }
 
-        public async Task<bool> IsRentedByUserWithId(int placeId, string currentUserId)
+        public async Task<bool> IsRentedByUserWithId(string placeId, string currentUserId)
         {
             bool result = false;
             var place = await repo.AllReadonly<Place>()
@@ -200,13 +200,11 @@ namespace TouristGuide.Core.Services
             await repo.SaveChangesAsync();
         }
       
-        public async Task Rent(int placeId, string currentUserId)
+     
+
+        public Task Edit(string placeId, PlaceModel model)
         {
-            var place = await repo.GetByIdAsync<Place>(placeId);
-
-            guard.AgainstNull(place, "Place can not be found");
-
-            await repo.SaveChangesAsync();
+            throw new NotImplementedException();
         }
     }
 }

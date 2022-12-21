@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouristGuide", "TouristGuid
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouristGuide.Infrastructure", "TouristGuide.Infrastructure\TouristGuide.Infrastructure.csproj", "{894B5548-6080-419A-85A3-868C55CF236B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouristGuide.Core", "TouristGuide.Core\TouristGuide.Core.csproj", "{8237AF00-6DBE-451E-AB2D-2B8881C38494}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouristGuide.Core", "TouristGuide.Core\TouristGuide.Core.csproj", "{8237AF00-6DBE-451E-AB2D-2B8881C38494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

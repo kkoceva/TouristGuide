@@ -8,7 +8,7 @@ namespace TouristGuide.Core.Contracts
 
         Task<bool> CategoryExists(int categoryId);
 
-        Task<int> Create(PlaceModel model, int agentId);
+        Task<string> Create(PlaceModel model);
 
         Task<PlaceQueryModel> All(
             string? category = null,
@@ -21,9 +21,9 @@ namespace TouristGuide.Core.Contracts
 
         Task<IEnumerable<PlaceServiceModel>> AllPlacesByUserId(string userId);
 
-        Task<bool> Exists(int id);
+        Task<bool> Exists(string id);
 
-        Task Edit(int placeId, PlaceModel model);
+        Task Edit(string placeId, PlaceModel model);
 
         Task<int> GetPlaceCategoryId(int placeId);
 
