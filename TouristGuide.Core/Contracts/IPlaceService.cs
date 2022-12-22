@@ -6,7 +6,7 @@ namespace TouristGuide.Core.Contracts
     {
         Task<IEnumerable<PlaceCategoryModel>> AllCategories();
 
-        Task<IEnumerable<PlaceHomeModel>> LastThreeHouses();
+        Task<IEnumerable<PlaceHomeModel>> LastThreePlaces();
 
         Task<bool> CategoryExists(int categoryId);
 
@@ -20,7 +20,7 @@ namespace TouristGuide.Core.Contracts
             int placesPerPage = 1);
 
         Task<IEnumerable<string>> AllCategoriesNames();
-
+    
         Task<IEnumerable<PlaceServiceModel>> AllPlacesByUserId(string userId);
 
         Task<PlaceDetailsModel> PlaceDetailsById(string id);

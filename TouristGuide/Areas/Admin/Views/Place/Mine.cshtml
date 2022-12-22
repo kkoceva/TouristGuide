@@ -1,0 +1,24 @@
+﻿@using TouristGuide.Areas.Admin.Models
+ @model MyPlacesViewModel
+
+@{
+    ViewBag.Title = "My Places";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<h4>My Added Houses</h4>
+
+@if (!Model.AddedPlaces.Any())
+{
+    <h2 class="text-center">You have no added places yet!</h2>
+}
+
+<div class="row">
+    @foreach (var place in Model.AddedPlaces)
+    {
+        @await Html.PartialAsync("~/Views/Shared/_PlacePartial.cshtml", place)
+    }
+</div>
+

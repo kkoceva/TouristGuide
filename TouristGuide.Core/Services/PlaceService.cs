@@ -189,7 +189,7 @@ namespace TouristGuide.Core.Services
             return (await repo.GetByIdAsync<Place>(placeId)).CategoryId;
         }
 
-        public async Task<IEnumerable<PlaceHomeModel>> LastThreeHouses()
+        public async Task<IEnumerable<PlaceHomeModel>> LastThreePlaces()
         {
             return await repo.AllReadonly<Place>()
                 .OrderByDescending(h => h.Id)

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using TouristGuide.Core.Contracts;
 using TouristGuide.Models;
+using static TouristGuide.Areas.Admin.Constants.AdminConstants;
 
 namespace TouristGuide.Controllers
 {
@@ -23,8 +24,12 @@ namespace TouristGuide.Controllers
 
         public async Task<IActionResult> Index()
         {
-            
-            var model = await placeService.LastThreeHouses();
+            if (User.IsInRole(AdminRoleName))
+            {
+                return RedirectToAction("Index", "Admin", new { area = "Admin" });
+            }
+
+            var model = await placeService.LastThreePlaces();
 
             return View(model);
         }

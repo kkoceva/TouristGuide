@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using TouristGuide.Core.Contracts;
 using TouristGuide.Core.Models.Place;
+using TouristGuide.Extensions;
 using TouristGuide.Models;
+using static TouristGuide.Areas.Admin.Constants.AdminConstants;
 
 namespace TouristGuide.Controllers
 {
@@ -40,19 +42,19 @@ namespace TouristGuide.Controllers
             return View(query);
         }
 
-        //public async Task<IActionResult> Mine()
-        //{
-        //    //if (User.IsInRole(AdminRolleName))
-        //    //{
-        //    //    return RedirectToAction("Mine", "place", new { area = AreaName });
-        //    //}
-        //    //var userId = User.Claims.Claims
-        //    //IEnumerable<PlaceServiceModel> myPlaces;
+        public async Task<IActionResult> Mine()
+        {
+            if (User.IsInRole(AdminRoleName))
+            {
+                return RedirectToAction("Mine", "Place", new { area = AreaName });
+            }
+            var userId = User.Id();
+            IEnumerable<PlaceServiceModel> myPlaces;
 
-        //    //myPlaces = await placeService.AllPlacesByUserId(userId);
+            myPlaces = await placeService.AllPlacesByUserId(userId);
 
-        //    return View(myPlaces);
-        //}
+            return View(myPlaces);
+        }
 
         [AllowAnonymous]
         public async Task<IActionResult> Details(string id, string information)
