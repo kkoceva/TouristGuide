@@ -9,11 +9,10 @@ namespace TouristGuide.Core.Models.Place
 
         public string Name { get; init; } = null!;
 
-
         [Display(Name = "Image URL")]
         public string ImageUrl { get; init; } = null!;
 
         [Display(Name = "Description")]
-        public string? Description { get; init; }
+        public string Description { get; init; }
     }
 }

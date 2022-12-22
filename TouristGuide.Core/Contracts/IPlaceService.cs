@@ -6,6 +6,8 @@ namespace TouristGuide.Core.Contracts
     {
         Task<IEnumerable<PlaceCategoryModel>> AllCategories();
 
+        Task<IEnumerable<PlaceHomeModel>> LastThreeHouses();
+
         Task<bool> CategoryExists(int categoryId);
 
         Task<string> Create(PlaceModel model);

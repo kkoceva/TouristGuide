@@ -4,10 +4,10 @@
     ViewBag.Title = "All Places";
 }
 
-@*<h2 class="text-center">@ViewBag.Name</h2>
-<hr />*@
+<h2 class="text-center">@ViewBag.Name</h2>
+<hr />
 
-@*<form method="get">
+<form method="get">
     <div class="row">
         <div class="form-group col-md-3 d-flex justify-content-between">
             <div class="form-group">
@@ -32,7 +32,7 @@
                 <label asp-for="Sorting"></label>
                 <select asp-for="Sorting" class="form-control">
                     <option value="0">Newest</option>
-                    <option value="1">Lowest price first</option>
+                    <option value="1">Rating</option>
                 </select>
             </div>
         </div>
@@ -95,4 +95,4 @@
     {
         <partial name="_PlacePartial" model="@place" />
     }
-</div>*@
+</div>

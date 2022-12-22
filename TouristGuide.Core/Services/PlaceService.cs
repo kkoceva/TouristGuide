@@ -76,17 +76,7 @@ namespace TouristGuide.Core.Services
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<PlaceServiceModel>> AllPlacesByAgentId(int id)
-        {
-            return await repo.AllReadonly<Place>()
-                .Select(c => new PlaceServiceModel() 
-                {
-                    Id = c.Id,
-                    ImageUrl = c.ImageUrl,
-                    Name = c.Name
-                })
-                .ToListAsync();
-        }
+      
 
         public async Task<IEnumerable<PlaceServiceModel>> AllPlacesByUserId(string userId)
         {
@@ -169,6 +159,8 @@ namespace TouristGuide.Core.Services
                 {
                     Category = h.Category.Name,
                     Description = h.Description,
+                    PlaceLocation = h.PlaceLocation,
+                    Country = h.Country.Name,
                     Id = id,
                     ImageUrl = h.ImageUrl,
                     Name = h.Name,
@@ -195,6 +187,20 @@ namespace TouristGuide.Core.Services
         public async Task<int> GetPlaceCategoryId(string placeId)
         {
             return (await repo.GetByIdAsync<Place>(placeId)).CategoryId;
+        }
+
+        public async Task<IEnumerable<PlaceHomeModel>> LastThreeHouses()
+        {
+            return await repo.AllReadonly<Place>()
+                .OrderByDescending(h => h.Id)
+                .Select(h => new PlaceHomeModel()
+                {
+                    Id = h.Id,
+                    ImageUrl = h.ImageUrl,
+                    Name = h.Name,
+                })
+                .Take(3)
+                .ToListAsync();
         }
     }
 }

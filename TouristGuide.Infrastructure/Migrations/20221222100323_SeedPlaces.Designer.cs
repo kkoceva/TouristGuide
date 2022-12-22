@@ -12,8 +12,8 @@ using TouristGuide.Infrastructure.Data;
 namespace TouristGuide.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221221222606_SeedUserAndPlaces")]
-    partial class SeedUserAndPlaces
+    [Migration("20221222100323_SeedPlaces")]
+    partial class SeedPlaces
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -241,16 +241,16 @@ namespace TouristGuide.Infrastructure.Migrations
                         {
                             Id = "dea12856-c198-4129-b3f3-b893d8395082",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "74e47ea7-fb84-4f28-8926-e712ac6aac9a",
+                            ConcurrencyStamp = "7b02a6f8-802f-4a58-a62f-d76c6f3026c0",
                             Email = "guest@mail.com",
                             EmailConfirmed = false,
                             IsActive = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "guest@mail.com",
                             NormalizedUserName = "guest@mail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAED8vFNw9R+dJkF+lSSZ91YptM4Cfha5/i9T4VH9q9nMlX01AelqZR4hjU5/sZWGKpw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE33k3/Qk8uutEmmHCnubXud6H9023MQ/XmfMvsNORELvfVwmUyPoKogirjFIESyFA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "082b3f59-0895-4de1-a900-f323fefb168f",
+                            SecurityStamp = "761b3850-d575-4167-b3a6-83709b26052c",
                             TwoFactorEnabled = false,
                             UserName = "agent@mail.com"
                         },
@@ -258,16 +258,16 @@ namespace TouristGuide.Infrastructure.Migrations
                         {
                             Id = "6d5800ce-d726-4fc8-83d9-d6b3ac1f591e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "99158f85-7fcd-4d0b-b307-f69718f5a563",
+                            ConcurrencyStamp = "fb2db780-9f78-4343-8d75-48b5b5d12e9d",
                             Email = "guest1@mail.com",
                             EmailConfirmed = false,
                             IsActive = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "guest1@mail.com",
                             NormalizedUserName = "guest1@mail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJyIMgpxTLADuadyI3RWt022B9CS070Up+3pfrc6PQFHfuyTiPWUdZeSF/f9tFu+zQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMjpPf+PVCFpPvvgwE2NDDCV6SDaLShVnpJnPblu/8O5GnwuiZHyK7jlMVwqJc4e0Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e46616f1-7054-4a16-b524-fb9f8d61b3bf",
+                            SecurityStamp = "835085ee-6c2e-4e3a-9d28-f1a54bd2de9c",
                             TwoFactorEnabled = false,
                             UserName = "guest1@mail.com"
                         });
@@ -288,7 +288,24 @@ namespace TouristGuide.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Landmark"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "SightSeeing"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Restaurant"
+                        });
                 });
 
             modelBuilder.Entity("TouristGuide.Infrastructure.Data.Entities.Comment", b =>
@@ -329,7 +346,24 @@ namespace TouristGuide.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "France"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "United Kingdom"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Australia"
+                        });
                 });
 
             modelBuilder.Entity("TouristGuide.Infrastructure.Data.Entities.ParentPlace", b =>
@@ -347,6 +381,23 @@ namespace TouristGuide.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ParentPlace");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Paris"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "London"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Restaurant"
+                        });
                 });
 
             modelBuilder.Entity("TouristGuide.Infrastructure.Data.Entities.Place", b =>
@@ -367,8 +418,8 @@ namespace TouristGuide.Infrastructure.Migrations
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -378,8 +429,9 @@ namespace TouristGuide.Infrastructure.Migrations
                     b.Property<int>("ParentPlaceId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PlaceLocationId")
-                        .HasColumnType("int");
+                    b.Property<string>("PlaceLocation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -390,27 +442,46 @@ namespace TouristGuide.Infrastructure.Migrations
 
                     b.HasIndex("CountryId");
 
+                    b.HasIndex("ParentPlaceId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Places");
-                });
 
-            modelBuilder.Entity("TouristGuide.Infrastructure.Data.Entities.PlaceLocation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PlaceLocation");
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            CategoryId = 3,
+                            CountryId = 1,
+                            Description = "A big tower.",
+                            ImageUrl = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+                            Name = "AifelTower",
+                            ParentPlaceId = 1,
+                            PlaceLocation = "43.56.89"
+                        },
+                        new
+                        {
+                            Id = "2",
+                            CategoryId = 2,
+                            CountryId = 2,
+                            Description = "Nice to be seen in july",
+                            ImageUrl = "https://images.pexels.com/photos/77171/pexels-photo-77171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                            Name = "Big Ben",
+                            ParentPlaceId = 2,
+                            PlaceLocation = "43.56.89"
+                        },
+                        new
+                        {
+                            Id = "3",
+                            CategoryId = 2,
+                            CountryId = 3,
+                            Description = "Nice view",
+                            ImageUrl = "https://images.pexels.com/photos/1878293/pexels-photo-1878293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                            Name = "Opera in sidney",
+                            ParentPlaceId = 3,
+                            PlaceLocation = "43.56.89"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -487,13 +558,7 @@ namespace TouristGuide.Infrastructure.Migrations
 
                     b.HasOne("TouristGuide.Infrastructure.Data.Entities.ParentPlace", "ParentPlace")
                         .WithMany("Places")
-                        .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TouristGuide.Infrastructure.Data.Entities.PlaceLocation", "PlaceLocation")
-                        .WithMany()
-                        .HasForeignKey("CountryId")
+                        .HasForeignKey("ParentPlaceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -506,8 +571,6 @@ namespace TouristGuide.Infrastructure.Migrations
                     b.Navigation("Country");
 
                     b.Navigation("ParentPlace");
-
-                    b.Navigation("PlaceLocation");
 
                     b.Navigation("User");
                 });

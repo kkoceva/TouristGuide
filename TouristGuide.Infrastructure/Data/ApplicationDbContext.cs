@@ -14,10 +14,16 @@ namespace TouristGuide.Infrastructure.Data
         }
 
         public DbSet<Place> Places { get; set; } = null!;
+        public DbSet<Category> Categories { get; set; } = null!;
+        public DbSet<Country> Countries { get; set; } = null!;
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new UserConfiguration());
             builder.ApplyConfiguration(new PlaceConfiguration());
+            builder.ApplyConfiguration(new CategoryConfiguration());
+            builder.ApplyConfiguration(new CountryConfiguration());
+            builder.ApplyConfiguration(new ParentPlaceConfiguration());
 
             base.OnModelCreating(builder);
         }

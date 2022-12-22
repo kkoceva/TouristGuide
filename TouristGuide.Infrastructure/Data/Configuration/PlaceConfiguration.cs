@@ -8,7 +8,7 @@ namespace TouristGuide.Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Place> builder)
         {
-            //builder.HasData(CreateHouses());
+            builder.HasData(CreatePlaces());
         }
 
         private List<Place> CreatePlaces()
@@ -21,8 +21,10 @@ namespace TouristGuide.Infrastructure.Data.Configuration
                       Name = "AifelTower",
                       Description = "A big tower.",
                       ImageUrl = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+                      PlaceLocation = "43.56.89",
                       CategoryId = 3,
-                     
+                      CountryId = 1,
+                      ParentPlaceId =1
                  },
 
                 new Place()
@@ -31,7 +33,10 @@ namespace TouristGuide.Infrastructure.Data.Configuration
                     Name = "Big Ben",
                     Description = "Nice to be seen in july",
                     ImageUrl = "https://images.pexels.com/photos/77171/pexels-photo-77171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    PlaceLocation = "43.56.89",
                     CategoryId = 2,
+                    CountryId = 2,
+                    ParentPlaceId = 2
                 },
 
                 new Place()
@@ -39,8 +44,11 @@ namespace TouristGuide.Infrastructure.Data.Configuration
                     Id = "3",
                     Name = "Opera in sidney",
                     Description = "Nice view",
+                    PlaceLocation = "43.56.89",
                     ImageUrl = "https://images.pexels.com/photos/1878293/pexels-photo-1878293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                     CategoryId = 2,
+                    CountryId = 3,
+                    ParentPlaceId = 3
                 }
             };
 

@@ -28,7 +28,7 @@ namespace TouristGuide.Infrastructure.Data.Entities
         public string Description { get; set; } = null!;
 
         [Required]
-        [StringLength(200)]
+        [StringLength(500)]
         public string ImageUrl { get; set; } = null!;
 
         [Required]
@@ -46,13 +46,10 @@ namespace TouristGuide.Infrastructure.Data.Entities
         [Required]
         public int ParentPlaceId { get; set; }
 
-        [ForeignKey(nameof(CountryId))]
+        [ForeignKey(nameof(ParentPlaceId))]
         public ParentPlace ParentPlace { get; set; } = null!;
-
-        public int? PlaceLocationId { get; set; }
-
-        [ForeignKey(nameof(CountryId))]
-        public PlaceLocation PlaceLocation { get; set; }
+       
+        public string PlaceLocation { get; set; }
 
         public string? UserId { get; set; }
 

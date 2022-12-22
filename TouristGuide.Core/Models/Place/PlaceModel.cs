@@ -16,6 +16,10 @@ namespace TouristGuide.Core.Models.Place
         public string Description { get; set; } = null!;
 
         [Required]
+        [StringLength(100, MinimumLength = 50)]
+        public string PlaceLocation { get; set; } = null!;
+
+        [Required]
         [Display(Name = "Image URL")]
         public string ImageUrl { get; set; } = null!;
 
@@ -26,6 +30,5 @@ namespace TouristGuide.Core.Models.Place
         public int CountryId { get; set; }
 
         public IEnumerable<PlaceCategoryModel> PlaceCategories { get; set; } = new List<PlaceCategoryModel>();
-        public IEnumerable<PlaceCountryModel> PlaceCountries { get; set; } = new List<PlaceCountryModel>();
     }
 }
