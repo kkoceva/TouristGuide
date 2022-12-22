@@ -10,10 +10,10 @@ namespace TouristGuide.Infrastructure.Data.Entities
     public class Comment
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
-        [StringLength(300)]
+        [StringLength(500)]
         public string? Description { get; set; }
     }
 }

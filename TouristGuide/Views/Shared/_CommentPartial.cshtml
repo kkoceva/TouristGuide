@@ -1,0 +1,21 @@
+﻿@using TouristGuide.Core.Models.Comment
+@model CommentModel
+<p></p>
+<form asp-controller="Comment" asp-action="Post" method="post" class="mb-3">
+    <div class="form-group card-header row">
+        <div class="col-12">
+            <h5>Send a new comment</h5>
+        </div>
+        <div class="col-8">
+            <label>Message: </label>
+            <textarea asp-for="@Model.CommentText"
+                      class="form-control" rows="3"></textarea>
+        </div>
+        <div class="col-4">
+            <label>Sender Name: </label>
+            <input asp-for="@Model.Sender" class="form-control">
+            <input class="btn btn-primary mt-2
+                   float-lg-right" type="submit" value="Send" />
+        </div>
+    </div>
+</form>

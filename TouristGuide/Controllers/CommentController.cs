@@ -8,5 +8,9 @@ namespace TouristGuide.Controllers
         {
             return View();
         }
+
+        //PostComment
+        //DeleteComment
+        //EditComment
     }
 }

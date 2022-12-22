@@ -24,9 +24,11 @@
                 @if (this.User.Identity.IsAuthenticated)
                 {
                     <a class="btn btn-warning" asp-controller="Place" asp-action="Edit"
-                       asp-route-id="@Model.Id">Edit</a>
+                   asp-route-id="@Model.Id">Edit</a>
                     <a class="ml-2 btn btn-danger" asp-controller="Place" asp-action="Delete"
-                       asp-route-id="@Model.Id">Delete</a>
+                   asp-route-id="@Model.Id">Delete</a>
+                    <a class="ml-2 btn btn-info" asp-controller="Place" asp-action=""
+                   asp-route-id="@Model.Id"><span class="glyphicon glyphicon-heart"></span> Like</a>
                 }
             </div>
         </div>

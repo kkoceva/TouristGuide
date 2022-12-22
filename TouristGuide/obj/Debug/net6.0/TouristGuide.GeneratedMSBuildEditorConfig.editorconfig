@@ -19,32 +19,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/Comment/AddComment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxBZGRDb21tZW50LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/Comment/AllComments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxBbGxDb21tZW50cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/Comment/DeleteComment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxEZWxldGVDb21tZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/Comment/EditComment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxFZGl0Q29tbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/Comment/Mine.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxNaW5lLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/Place/Add.cshtml]
@@ -71,20 +55,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhY2VcTWluZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/Place/Rating.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhY2VcUmF0aW5nLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/Shared/About.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFib3V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/Shared/ErrorMessage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yTWVzc2FnZS5jc2h0bWw=
+[C:/TouristGuide/TouristGuide/TouristGuide/Views/Shared/_CommentPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db21tZW50UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/Shared/_LoginPartial.cshtml]
@@ -101,10 +77,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/TouristGuide/TouristGuide/TouristGuide/Views/User/EditProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/TouristGuide/TouristGuide/TouristGuide/Views/User/Login.cshtml]

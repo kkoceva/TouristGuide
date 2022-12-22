@@ -2,7 +2,7 @@
 
 namespace TouristGuide.Controllers
 {
-    public class RatingController : Controller
+    public class VoteController : Controller
     {
         public IActionResult Index()
         {

@@ -46,13 +46,11 @@ namespace TouristGuide.Controllers
         //    //{
         //    //    return RedirectToAction("Mine", "place", new { area = AreaName });
         //    //}
+        //    //var userId = User.Claims.Claims
+        //    //IEnumerable<PlaceServiceModel> myPlaces;
 
-        //    //IEnumerable<PlaceServiceModel> myHhouses;
-        //    //var userId = User.Id();
+        //    //myPlaces = await placeService.AllPlacesByUserId(userId);
 
-           
-        //    //    myPlaces = await placeService.AllPlacesByUserId(userId);
-            
         //    return View(myPlaces);
         //}
 
