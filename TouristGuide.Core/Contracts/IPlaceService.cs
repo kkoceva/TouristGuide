@@ -21,13 +21,15 @@ namespace TouristGuide.Core.Contracts
 
         Task<IEnumerable<PlaceServiceModel>> AllPlacesByUserId(string userId);
 
+        Task<PlaceDetailsModel> PlaceDetailsById(string id);
+
         Task<bool> Exists(string id);
 
         Task Edit(string placeId, PlaceModel model);
 
-        Task<int> GetPlaceCategoryId(int placeId);
+        Task<int> GetPlaceCategoryId(string placeId);
 
-        Task Delete(int placeId);
+        Task Delete(string placeId);
       
     }
 }

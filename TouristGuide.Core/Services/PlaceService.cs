@@ -12,17 +12,13 @@ namespace TouristGuide.Core.Services
     {
         private readonly IRepository repo;
 
-        private readonly IGuard guard;
-
         private readonly ILogger logger;
 
         public PlaceService(
             IRepository _repo,
-            IGuard _guard,
             ILogger<PlaceService> _logger)
         {
             repo = _repo;
-            guard = _guard;
             logger = _logger;
         }
 
@@ -134,7 +130,7 @@ namespace TouristGuide.Core.Services
             return place.Id;
         }
 
-        public async Task Delete(int placeId)
+        public async Task Delete(string placeId)
         {
             var place = await repo.GetByIdAsync<Place>(placeId);
             await repo.SaveChangesAsync();
@@ -191,20 +187,14 @@ namespace TouristGuide.Core.Services
             return result;
         }
 
-
-        public async Task Leave(int placeId)
-        {
-            var place = await repo.GetByIdAsync<Place>(placeId);
-            guard.AgainstNull(place, "Place can not be found");
-
-            await repo.SaveChangesAsync();
-        }
-      
-     
-
-        public Task Edit(string placeId, PlaceModel model)
+        public async Task Edit(string placeId, PlaceModel model)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<int> GetPlaceCategoryId(string placeId)
+        {
+            return (await repo.GetByIdAsync<Place>(placeId)).CategoryId;
         }
     }
 }

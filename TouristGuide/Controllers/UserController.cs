@@ -27,7 +27,7 @@ namespace TouristGuide.Controllers
         {
             if (User?.Identity?.IsAuthenticated ?? false)
             {
-                return RedirectToAction("All", "Contacts");
+                return RedirectToAction("All", "Place");
             }
 
             var model = new RegisterViewModel();
@@ -71,7 +71,7 @@ namespace TouristGuide.Controllers
         {
             if (User?.Identity?.IsAuthenticated ?? false)
             {
-                return RedirectToAction("All", "Contacts");
+                return RedirectToAction("All", "Place");
             }
 
             var model = new LoginViewModel();
@@ -96,7 +96,7 @@ namespace TouristGuide.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("All", "Contacts");
+                    return RedirectToAction("All", "Place");
                 }
             }
 

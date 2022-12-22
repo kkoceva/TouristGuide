@@ -1,22 +1,17 @@
-﻿@using TouristGuide.Core.Models.Place
-@*@{
+﻿
+@model IEnumerable<PlaceHomeModel>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>*@
+</div>
 
-@model IEnumerable<PlaceHomeModel>
-@{
-    ViewData["Title"] = "Home Page";
-    bool first = true;
-}
 
 @*@if (Model != null & Model.Count() == 0)
-{
-*@    <div class="mt-4 p-5 bg-light">
+{*@
+   <div class="mt-4 p-5 bg-light">
         <h1 class="display-4">Choose where should be your next vacation or share experiance with others!</h1>
         <p class="lead">
             There are no places to see in the system currently available
@@ -24,11 +19,11 @@
         </p>
         <hr class="my-4">
         <p class="lead">
-           @* @if (this.User?.Identity != null && this.User.Identity.IsAuthenticated)
-            {*@
-                <a asp-controller="Place" asp-action="AddPlace" class="btn btn-primary btn-lg"
+           @if (this.User?.Identity != null && this.User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Place" asp-action="Add" class="btn btn-primary btn-lg"
            role="button">Add Place</a>
-            @*}*@
+            }
         </p>
     </div>
 @*}*@

@@ -5,7 +5,7 @@ namespace TouristGuide.Core.Models.Place
 {
     public class PlaceModel : IPlaceModel
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
         [StringLength(50, MinimumLength = 10)]

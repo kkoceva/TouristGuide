@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TouristGuide.Core.Contracts;
 using TouristGuide.Core.Services;
 using TouristGuide.Infrastructure.Data;
+using TouristGuide.Infrastructure.Data.Common;
 using TouristGuide.Infrastructure.Data.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,7 +39,9 @@ builder.Services.AddControllersWithViews()
      options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
  });
 
-//builder.Services.AddScoped<IPlaceService, PlaceService>();
+builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddScoped<IPlaceService, PlaceService>();
+builder.Services.AddResponseCaching();
 
 var app = builder.Build();
 
@@ -62,9 +65,32 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages();
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
+//app.MapRazorPages();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "default",
+      pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapControllerRoute(
+      name: "houseDetails",
+      pattern: "House/Details/{id}/{information}"
+    );
+
+    endpoints.MapRazorPages();
+});
+
+app.UseResponseCaching();
+
 
 app.Run();
